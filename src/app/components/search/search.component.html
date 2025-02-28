@@ -1,0 +1,19 @@
+<p>form works!</p>
+<div>
+    <div class="search-div">
+        <input autofocus inputmode="numeric" type="text" placeholder="000.000.000-00" [(ngModel)]="cpfNumber" (keydown)="updateSearch()" mask="000.000.000-00" />
+        <button class="btn-search" (click)="searchCpf()">Consultar Por CPF</button>
+    </div>
+    <div class="cards-div d-flex">
+        @for (cardInfo of cardInfos; track cardInfo.id) {
+            <div class="div-card" >
+                <app-card-detail [cardInfo]="cardInfo"></app-card-detail>
+            </div>
+        } @empty {
+            @if (cpfNumber && searchExecuted()) {
+                Cpf não invalido!
+            }
+        }
+    </div>
+</div>
+
