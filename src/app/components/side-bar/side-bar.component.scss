@@ -1,11 +1,15 @@
 @use '../../../styles.scss';
 
 ul {
+    margin-left: 2px;
     list-style-type: none;
     li {
         padding-bottom: 30px;
         &.btn-expand{
             margin-top: 68px;
+            .icon-expand{
+                color: styles.$gray5;
+            }
         }
         .bi {
             color: styles.$light-gray;
