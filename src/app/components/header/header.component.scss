@@ -1,7 +1,28 @@
+@use '../../../styles.scss';
+
 .example-header {
     position: fixed;
     top: 0;
-    left: 200px;
+    left: 100px;
     right: 0;
-    background: blue;
+    background: styles.$white;
+    height: 89px;
+}
+
+.title{
+    font-family: Exo;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+.subTitle{
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: styles.$gray2;
+
 }

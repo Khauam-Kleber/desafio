@@ -3,9 +3,11 @@
     <mat-sidenav #sidenav mode="side" opened class="example-sidenav" [fixedInViewport]="true" [fixedTopGap]="0" [fixedBottomGap]="0">
         <app-side-bar></app-side-bar>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content class="sidenav">
         <main>
-            <router-outlet></router-outlet>
+            <div class="content">
+                <router-outlet></router-outlet>
+            </div>
         </main>
     </mat-sidenav-content>
 </mat-sidenav-container>

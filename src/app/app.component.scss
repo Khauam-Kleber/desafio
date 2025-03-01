@@ -1,7 +1,9 @@
+@use '../styles.scss';
+
 .example-container {
     position: absolute;
     top: 60px;
-    bottom: 60px;
+    bottom: 0px;
     left: 0;
     right: 0;
 }
@@ -10,6 +12,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    background: rgba(255, 0, 0, 0.5);
+    width: 100px;
+    background: styles.$primary;
+}
+
+.content{
+    margin-top: 29px;
+}
+
+.sidenav{
+    overflow: hidden;
 }

@@ -1,10 +1,19 @@
+@use '../../../styles.scss';
+
 ul {
     list-style-type: none;
     li {
-        padding-bottom: 20px;
-
+        padding-bottom: 30px;
+        &.btn-expand{
+            padding-bottom: 40px;
+        }
         .bi {
-            color: white;
+            color: styles.$light-gray;
+            font-size: 25px;
         }
     }
+}
+
+.active i {
+    color: styles.$white !important;
 }
