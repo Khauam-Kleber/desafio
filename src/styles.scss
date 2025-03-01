@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+$primary: #165C7D;
 $white: #ffffff;
 $black: #000000;
+$light-gray: #dbdbdb;
+$gray1:#E7EEF1;
+$gray2:#787878;
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+@use 'bootstrap/scss/bootstrap';
