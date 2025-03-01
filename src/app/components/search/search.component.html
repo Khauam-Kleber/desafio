@@ -1,39 +1,55 @@
-<div>
-    <div> 
-        <div>
-            <p class="title">Informe o CPF do futuro cooperado (a)</p>
+<div class="content d-flex flex-column">
+    <div class="body">
+        <div> 
+            <div>
+                <p class="title">Informe o CPF do futuro cooperado (a)</p>
+            </div>
+            <div class="subTitle-div">
+                <p class="sub-title">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.
+                    Digite apenas os números (sem pontos ou traços).</p>
+            </div>
         </div>
-        <div class="subTitle-div">
-            <p class="sub-title">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.
-                Digite apenas os números (sem pontos ou traços).</p>
+        <div class="search-div">
+            <div class="d-flex flex-column">
+                <label for="cpf" class="font-weight-bold">CPF</label> 
+                <input #cpfInput class="input-cpf" [ngClass]="{'invalid': cpfNumber !== '' && !cpfIsValid()}"
+                autofocus inputmode="numeric" type="text" placeholder="000.000.000-00"
+                    [(ngModel)]="cpfNumber" (keydown)="updateValidation($event)" mask="000.000.000-00" />
+                @if (cpfNumber !== '' && !cpfIsValid()) {
+                    <p class="input-error">Informe um CPF válido</p>
+                }
+            </div>
+            <button class="btn-search btn-p" [ngClass]="{'error': cpfNumber !== '' && !cpfIsValid()}" (click)="searchCpf()" [disabled]="(cpfNumber !== '' && !cpfIsValid()) || cardInfos.length">
+                @if (!loading()) {
+                    <div class="text"> Consultar por CPF</div>
+                } @else{
+                    <span class="text spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                }
+            </button>
+        </div>
+        <div class="cards-div d-flex">
+            @if (cpfNumber !== '' && cpfIsValid()) {
+                @for (cardInfo of cardInfos; track cardInfo.id) {
+                    <div class="div-card" >
+                        <app-card-detail [cardInfo]="cardInfo"></app-card-detail>
+                    </div>
+                }
+            }
         </div>
     </div>
-    <div class="search-div">
-        <div class="d-flex flex-column">
-            <label for="cpf" class="font-weight-bold">CPF</label> 
-            <input #cpfInput class="input-cpf" [ngClass]="{'invalid': cpfNumber !== '' && !cpfIsValid()}"
-            autofocus inputmode="numeric" type="text" placeholder="000.000.000-00"
-             [(ngModel)]="cpfNumber" (keydown)="updateValidation($event)" mask="000.000.000-00" />
-            @if (cpfNumber !== '' && !cpfIsValid()) {
-                <p class="input-error">Informe um CPF válido</p>
-            }
+    <div class="actions-div">
+        <div class="btn-bar">
+            <button class="btn-action btn-m action-btn">
+                <div class="text"> Iniciar nova admissão</div>
+            </button>
+            <button class="btn-action btn-m-white">
+                <div class="text"> Dicas para abertura da conta</div>
+            </button>
         </div>
-        <button class="btn-search btn-p" [ngClass]="{'error': cpfNumber !== '' && !cpfIsValid()}" (click)="searchCpf()" [disabled]="(cpfNumber !== '' && !cpfIsValid()) || cardInfos.length">
-            @if (!loading()) {
-                <div class="text"> Consultar por CPF</div>
-            } @else{
-                <span class="text spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            }
-    </button>
-    </div>
-    <div class="cards-div d-flex">
-        @if (cpfNumber !== '' && cpfIsValid()) {
-            @for (cardInfo of cardInfos; track cardInfo.id) {
-                <div class="div-card" >
-                    <app-card-detail [cardInfo]="cardInfo"></app-card-detail>
-                </div>
-            }
-        }
+    
     </div>
 </div>
+
+
+
 

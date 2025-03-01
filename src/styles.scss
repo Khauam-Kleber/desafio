@@ -72,6 +72,46 @@ input{
     }
 }
 
+.btn-m{
+    background-color: $primary;
+    width: auto;
+    height: 48px;
+    border-radius: 2px;
+    padding-top: 13px;
+    padding-right: 25px;
+    padding-bottom: 13px;
+    padding-left: 25px;
+    border: none;
+
+    .text{
+        color: $white;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21.79px;
+    }
+}
+
+.btn-m-white{
+    background-color: $white;  
+    width: auto;
+    height: 48px;
+    border-radius: 2px;
+    padding-top: 13px;
+    padding-right: 25px;
+    padding-bottom: 13px;
+    padding-left: 25px;
+    border: 1px solid $primary;
+
+    .text{
+        color: $primary;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21.79px;
+    }
+}
+
 button:disabled {
     background-color: $blue1 !important;
     cursor: not-allowed; 

@@ -7,6 +7,15 @@
     background-color: styles.$gray1;
 }
 
+.content{
+    min-height: 100%;
+    justify-content: space-between;
+}
+
+.body{
+    min-height: 85%;
+}
+
 .search-div{
     display: flex;
     align-items: center;
@@ -18,6 +27,17 @@
     &.error{
         margin-bottom: 46px;
     }
+}
+
+.btn-bar{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+}
+
+.btn-action{
+    margin-left: 20px;
 }
 
 .cards-div{
@@ -51,4 +71,11 @@
 .input-cpf{
     width: 270px;
     height: 34px;
+}
+
+.actions-div {
+    background-color: styles.$white;
+    height: 78px;
+    margin-left: -26px;
+    margin-right: -26px;
 }
