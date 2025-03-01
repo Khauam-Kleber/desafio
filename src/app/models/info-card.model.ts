@@ -5,7 +5,7 @@ export interface InfoCard{
     name?: string;
     accountNumber?: number;
     accountDigit?: number;
-    showSituation?: boolean;
+    status?: string;
 }
 
 
@@ -16,7 +16,7 @@ export function findFakeInfoByCpf():InfoCard[]{
             title:'Situação cadastral do CPF',
             subTitle:"Consulta na Receita Federal",
             name:"Khauam K F Cardoso",
-            showSituation:true
+            status:"Regular"
         },
         {
             id:1,
@@ -24,7 +24,6 @@ export function findFakeInfoByCpf():InfoCard[]{
             subTitle:"Cooperativa Viacredi",
             accountNumber: 557932,
             accountDigit: 4,
-            showSituation:false
         },
         {
             id:2,
@@ -32,7 +31,6 @@ export function findFakeInfoByCpf():InfoCard[]{
             subTitle:"Cooperativa Viacredi",
             accountNumber: 7778461,
             accountDigit: 8,
-            showSituation:false
         }
     ]
 }

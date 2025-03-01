@@ -1,20 +1,44 @@
 <div class="card-style d-flex flex-column"> 
-    <div> 
-        {{cardInfo.title}}
+    <div class="header">
+        <div class="title-card"> 
+            {{cardInfo.title}}
+        </div>
+        <div class="sub-title"> 
+            {{cardInfo.subTitle}}
+        </div>
     </div>
-    <div> 
-        {{cardInfo.subTitle}}
+    <div class="body">
+        @if (cardInfo.name) {
+            <div class="d-flex">
+                <i class="bi bi-person-fill icon-gray"></i>
+                <div class="status d-flex flex-column">
+                    <div class="text">Nome</div>
+                    <div class="text-card"> {{cardInfo.name}}</div>
+                </div>
+            </div>
+        }@else if (cardInfo.accountNumber && cardInfo.accountDigit) {
+            <div class="d-flex">
+                <i class="bi bi-credit-card icon-gray"></i>
+                <div class="status d-flex flex-column">
+                    <div class="text">Número da conta</div>
+                    <div class="text-card"> {{cardInfo.accountNumber}}-{{cardInfo.accountDigit}}</div>
+                </div>
+            </div>
+        }
     </div>
-    <div> 
-        {{cardInfo.name}}
-    </div>
-    <div> 
-        {{cardInfo.accountNumber}}
-    </div>
-    <div> 
-        {{cardInfo.accountDigit}}
-    </div>
-    <div> 
-        {{cardInfo.showSituation}}
+    <div class="footer">
+        @if (cardInfo.accountNumber && cardInfo.accountDigit) {
+            <div class="text-card link-text pointer">
+                Duplicar Conta
+            </div>
+        } @else if(cardInfo.status){
+            <div class="d-flex">
+                <i class="bi bi-check2-circle status-icon"></i>
+                <div class="status d-flex flex-column">
+                    <div class="text">Situação do CPF</div>
+                    <div class="text-card"> {{cardInfo.status}}</div>
+                </div>
+            </div>
+        }
     </div>
 </div>

@@ -5,7 +5,7 @@ ul {
     li {
         padding-bottom: 30px;
         &.btn-expand{
-            padding-bottom: 40px;
+            margin-top: 68px;
         }
         .bi {
             color: styles.$light-gray;
@@ -16,4 +16,11 @@ ul {
 
 .active i {
     color: styles.$white !important;
+}
+
+.logo{
+    position: absolute;
+    width: 60px;
+    top: 19px;
+    right: 20px;
 }

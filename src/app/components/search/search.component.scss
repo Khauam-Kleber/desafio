@@ -1,7 +1,7 @@
 @use '../../../styles.scss';
 :host{
     position:absolute;
-    padding: 20px;
+    padding: 25px;
     width: 100%;
     height: 100%;
     background-color: styles.$gray1;
@@ -9,10 +9,15 @@
 
 .search-div{
     display: flex;
+    align-items: center;
 }
 
 .btn-search{
-    margin-left: 10px;
+    margin-left: 20px;
+    align-self: end;
+    &.error{
+        margin-bottom: 46px;
+    }
 }
 
 .cards-div{
@@ -21,4 +26,29 @@
 
 .div-card{
     margin-right: 20px;
+}
+
+.title{
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29.96px;
+    margin-bottom: 5px;
+}
+
+.subTitle-div{
+    width: 742px;
+}
+
+.sub-title{
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14.98px;
+    color: styles.$gray3;
+}
+
+.input-cpf{
+    width: 270px;
+    height: 34px;
 }

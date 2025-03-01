@@ -1,11 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
 
 $primary: #165C7D;
+$blue1:#A2BECB;
 $white: #ffffff;
 $black: #000000;
 $light-gray: #dbdbdb;
 $gray1:#E7EEF1;
 $gray2:#787878;
+$gray3:#4F575E;
+$gray4:#889499;
+$red1:#C13018;
+$green: #00C246;
 
 /* Importing Bootstrap SCSS file. */
 @use 'bootstrap/scss/bootstrap';
+@use "@fontsource/exo"; 
+@use "@fontsource/open-sans"; 
+
+
+label{
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19.07px;
+    margin-bottom: 8px;
+}
+
+input{
+    outline: none;
+    border-radius: 2px;
+    border-width: 1px;
+    padding-left: 8px;
+    color: $gray4;
+
+    input:focus {
+        border-color: $primary;
+    }
+    &.invalid {
+        border-width: 1px;
+        border-color: $red1;
+    }
+}
+
+.input-error {
+    padding-top:16px;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13.62px;
+    color:$red1;
+}
+
+.btn-p{
+    background-color: $primary;
+    width: 172px;
+    height: 34px;
+    border-radius: 2px;
+    padding-top: 6px;
+    padding-right: 25px;
+    padding-bottom: 6px;
+    padding-left: 25px;
+    border: none;
+
+    .text{
+        color: $white;
+        font-family: Open Sans;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19.07px;
+    }
+}
+
+button:disabled {
+    background-color: $blue1 !important;
+    cursor: not-allowed; 
+    opacity: 0.7; 
+}
+
+.pointer{
+    cursor: pointer;
+}
+
