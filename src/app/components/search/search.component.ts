@@ -18,7 +18,6 @@ export class SearchComponent {
   private utilsService = inject(UtilsService);
   @ViewChild('cpfInput')
   yourElement!: ElementRef;
-
   timeoutKeyDown: any = null;
   cpfNumber: string = '';
   cpfIsValid = signal(true);
