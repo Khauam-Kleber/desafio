@@ -1,0 +1,68 @@
+
+@use '../../../styles.scss';
+
+.stepper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    height: 86px;
+  
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      flex: 1;
+  
+      .circle {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: styles.$gray6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2; 
+      }
+  
+      span {
+        margin-top: 20px;
+        font-family: Open Sans;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19.07px;
+        text-align: center;
+        color:styles.$gray4;
+      }
+  
+      &.active {
+        .circle {
+          background-color: styles.$white;
+          border: 2px solid styles.$primary;
+        }
+  
+        span {
+          color: styles.$primary;
+          font-weight: bold;
+        }
+      }
+    }
+  
+    .line {
+        position: absolute;
+        top: 28%;
+        left: 83px;
+        width: 74%;
+        height: 2px;
+        background-color: styles.$gray6;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+  
+   
+  }
+  

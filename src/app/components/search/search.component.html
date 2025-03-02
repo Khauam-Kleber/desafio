@@ -1,6 +1,7 @@
 <div class="content d-flex flex-column">
     <div class="body">
-        <div> 
+        <app-stepper></app-stepper>
+        <div class="title-div"> 
             <div>
                 <p class="title">Informe o CPF do futuro cooperado (a)</p>
             </div>
@@ -39,9 +40,11 @@
     </div>
     <div class="actions-div">
         <div class="btn-bar">
-            <button class="btn-action btn-m action-btn">
-                <div class="text"> Iniciar nova admissão</div>
-            </button>
+            @if (cardInfos.length) {
+                <button class="btn-action btn-m action-btn">
+                    <div class="text"> Iniciar nova admissão</div>
+                </button>
+             }
             <button class="btn-action btn-m-white">
                 <div class="text"> Dicas para abertura da conta</div>
             </button>
