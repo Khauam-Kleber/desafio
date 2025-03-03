@@ -4,6 +4,7 @@ $primary: #165C7D;
 $blue1:#A2BECB;
 $white: #ffffff;
 $black: #000000;
+$black1:#040F14;
 $light-gray: #dbdbdb;
 $gray1:#E7EEF1;
 $gray2:#787878;
@@ -34,7 +35,7 @@ input{
     border-radius: 2px;
     border-width: 1px;
     padding-left: 8px;
-    color: $gray4;
+    color: $black1;
 
     input:focus {
         border-color: $primary;
