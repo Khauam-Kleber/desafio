@@ -31,6 +31,6 @@ export function findFakeInfoByCpf():InfoCard[]{
             subTitle:"Cooperativa Viacredi",
             accountNumber: 7778461,
             accountDigit: 8,
-        }
+        },
     ]
 }

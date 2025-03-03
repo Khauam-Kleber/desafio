@@ -5,6 +5,7 @@
     width: 100%;
     height: 100%;
     background-color: styles.$gray1;
+    overflow: auto;
 }
 
 .content{
@@ -14,6 +15,7 @@
 
 .body{
     min-height: 85%;
+    margin-bottom: 15px;
 }
 
 .search-div{
@@ -22,7 +24,7 @@
 }
 
 .btn-search{
-    margin-left: 20px;
+    margin-left: 15px;
     align-self: end;
     &.error{
         margin-bottom: 46px;
@@ -41,11 +43,10 @@
 }
 
 .cards-div{
-    margin-top: 20px;
-}
-
-.div-card{
-    margin-right: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 29px;
 }
 
 .title-div {
@@ -61,7 +62,7 @@
 }
 
 .subTitle-div{
-    width: 742px;
+    width: 50%;
 }
 
 .sub-title{
@@ -73,7 +74,7 @@
 }
 
 .input-cpf{
-    width: 270px;
+    width: auto;
     height: 34px;
 }
 
@@ -82,6 +83,7 @@
     height: 78px;
     margin-left: -26px;
     margin-right: -26px;
+    margin-bottom: -1vh;
 }
 
 
